@@ -1,0 +1,191 @@
+/* import Google LATO font */
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;1,300");
+/* Reset général */
+html {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(images/des.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+body {
+    font-family: "Lato", sans-serif;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+}
+button {
+    font-size: 1.5em;
+    padding: 1%;
+    width: 100%;
+    margin: 3%;
+}
+button p {
+    margin: 0;
+    text-align: center;
+}
+/* Main */
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+}
+/* Entete */
+.card-home {
+    border: none;
+    background-color: #6d442e5d;
+    border: 1px solid#6D442E;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 25%;
+}
+.card-header {
+    padding: 1%;
+    border: none;
+    width: 100%;
+}
+h1 {
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+.btn.btn-light {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    text-align: center;
+}
+.btn.btn-light:hover {
+    background-color: #0d6efd;
+    color: white;
+}
+.bi.bi-plus-circle {
+    color: red;
+    font-size: 1.5em;
+    margin-right: 10px;
+    font-weight: bolder;
+}
+/* Players*/
+.players {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 5% 1%;
+}
+.player-panel {
+    display: inline-block;
+    background-color: #6d442e5d;
+    border: 1px solid black;
+    margin: 1%;
+    padding: 1%;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.player-panel.active {
+    background-color: #5e0001;
+    border: 1px solid black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.player-name {
+    font-size: 1.5em;
+    font-weight: bold;
+    border-bottom: 1px solid black;
+}
+.player-score {
+    font-size: 1.5em;
+}
+.player-current-box {
+    margin: 5%;
+}
+.player-current-label {
+    font-size: 1.5em;
+    color: grey;
+    border-bottom: 1px solid black;
+}
+.player-current-score {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+/* Image dé */
+.img {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.dice {
+    width: 50%;
+}
+/* Boutons */
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 40%;
+}
+.bi.bi-bootstrap-reboot,
+.bi.bi-box-arrow-in-down {
+    margin: 10%;
+    font-size: 1.5em;
+}
+
+@media screen and (min-width: 426px) {
+    .card-home {
+        margin-bottom: 5%;
+    }
+    .players {
+        justify-content: center;
+    }
+
+    .dice {
+        width: 100%;
+    }
+    .buttons {
+        margin-top: 5%;
+    }
+}
+@media screen and (min-width: 875px) {
+    .card-home {
+        margin-bottom: 0;
+    }
+    .players {
+        justify-content: center;
+    }
+    .img {
+        margin: 0 20% 0 20%;
+    }
+    .dice {
+        width: 100%;
+    }
+    .buttons {
+        margin-top: 0;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .players {
+        margin: 1% 1%;
+    }
+    .img {
+        margin: 2%;
+    }
+}
