@@ -19,107 +19,91 @@
     </head>
     <body>
         <main>
-            <section class="content">
-                <!-- Entete -->
-                <div class="card-home">
-                    <div class="card-header">
-                        <h1>Jeu de dés</h1>
-                    </div>
-                    <div class="card-body">
-                        <button
-                            id="new-btn"
-                            type="button"
-                            class="btn btn-light"
-                        >
-                            <i class="bi bi-plus-circle"></i>
-                            NOUVELLE PARTIE
-                        </button>
-                    </div>
+            <!-- Entete -->
+            <section class="card-home">
+                <div class="card-header">
+                    <h1>Jeu de dés</h1>
                 </div>
-                <!-- Fin Entete -->
-                <!-- Players-->
-                <div class="players">
-                    <!-- Players 1-->
-                    <div class="card" style="width: 18rem">
-                        <div id="player1-panel" class="player-panel active">
-                            <div class="card-body">
-                                <div class="player-name" id="name-0">
-                                    Score Joueur 1
-                                </div>
-                                <img
-                                    src="/images/J1.jpg"
-                                    class="card-img-top"
-                                    alt="Image joueur 1"
-                                    width="18rem"
-                                />
-                                <div class="player-score" id="score-0">0</div>
-                                <div class="player-current-box">
-                                    <div class="player-current-label">
-                                        Tour en cours
-                                    </div>
-                                    <div
-                                        class="player-current-score"
-                                        id="current-0"
-                                    >
-                                        0
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Fin Players 1-->
-                    <!-- Image dé -->
-                    <div class="img">
-                        <img
-                            src="images/de.png"
-                            alt="Image de dé par défaut"
-                            class="dice"
-                        />
-                    </div>
-                    <!-- Fin Image dé -->
-                    <!-- Players 2-->
-                    <div class="card" style="width: 18rem">
-                        <div id="player2-panel" class="player-panel">
-                            <div class="card-body">
-                                <div class="player-name" id="name-1">
-                                    Score Joueur 2
-                                </div>
-                                <img
-                                    src="/images/J2.jpg"
-                                    class="card-img-top"
-                                    alt="Image joueur 2"
-                                />
-                                <div class="player-score" id="score-1">0</div>
-                                <div class="player-current-box">
-                                    <div class="player-current-label">
-                                        Tour en cours
-                                    </div>
-                                    <div
-                                        class="player-current-score"
-                                        id="current-1"
-                                    >
-                                        0
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Fin Players 2 -->
-                </div>
-                <!-- Fin Players -->
-                <!-- Boutons -->
-                <div class="buttons">
-                    <button class="btn btn-primary" id="roll-btn">
-                        <i class="bi bi-bootstrap-reboot"></i>
-                        Jouer
-                    </button>
-                    <button class="btn btn-primary" id="hold-btn">
-                        <i class="bi bi-box-arrow-in-down"></i>
-                        Passer
+                <div class="card-body-home">
+                    <button id="new-btn" type="button" class="btn btn-light">
+                        <i class="bi bi-plus-circle"></i>
+                        <p>NOUVELLE PARTIE</p>
                     </button>
                 </div>
-                <!-- Fin Boutons -->
             </section>
+            <!-- Fin Entete -->
+            <!-- Players-->
+            <section class="container">
+                <!-- Players 1-->
+                <div id="player1-panel" class="player-panel active">
+                    <div class="card-body">
+                        <div class="player-name" id="name-0">
+                            Score Joueur 1
+                        </div>
+                        <img
+                            src="/images/J1.jpg"
+                            class="card-img-top"
+                            alt="Image joueur 1"
+                            width="18rem"
+                        />
+                        <div class="player-score" id="score-0">0</div>
+                        <div class="player-current-box">
+                            <div class="player-current-label">
+                                Tour en cours
+                            </div>
+                            <div class="player-current-score" id="current-0">
+                                0
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin Players 1-->
+                <!-- Players 2-->
+                <div id="player2-panel" class="player-panel">
+                    <div class="card-body">
+                        <div class="player-name" id="name-1">
+                            Score Joueur 2
+                        </div>
+                        <img
+                            src="/images/J2.jpg"
+                            class="card-img-top"
+                            alt="Image joueur 2"
+                            width="18rem"
+                        />
+                        <div class="player-score" id="score-1">0</div>
+                        <div class="player-current-box">
+                            <div class="player-current-label">
+                                Tour en cours
+                            </div>
+                            <div class="player-current-score" id="current-1">
+                                0
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Image dé -->
+                <div class="img">
+                    <img
+                        src="images/de.png"
+                        alt="Image de dé par défaut"
+                        class="dice"
+                    />
+                </div>
+                <!-- Fin Image dé -->
+            </section>
+            <!-- Fin Players -->
+            <!-- Boutons -->
+            <section class="buttons">
+                <button class="btn btn-primary" id="roll-btn">
+                    <i class="bi bi-bootstrap-reboot"></i>
+                    Jouer
+                </button>
+                <button class="btn btn-primary" id="hold-btn">
+                    <i class="bi bi-box-arrow-in-down"></i>
+                    Passer
+                </button>
+            </section>
+            <!-- Fin Boutons -->
         </main>
         <script src="script.js"></script>
         <script

@@ -10,35 +10,21 @@ html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    box-sizing: border-box;
 }
 body {
+    background-color: transparent;
     font-family: "Lato", sans-serif;
     font-size: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    background-color: transparent;
-    width: 100%;
-    height: 100%;
-}
-button {
-    font-size: 1.5em;
-    padding: 1%;
-    width: 100%;
-    margin: 3%;
-}
-button p {
     margin: 0;
-    text-align: center;
+    padding: 0;
 }
-/* Main */
 main {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    width: 100%;
-    height: 100%;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
 }
 /* Entete */
 .card-home {
@@ -48,22 +34,34 @@ main {
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     text-align: center;
-    margin-bottom: 25%;
+    margin: 5% 2%;
 }
-.card-header {
+.card-header,
+.card-body-home {
     padding: 1%;
     border: none;
-    width: 100%;
+    width: 70%;
+    text-align: center;
 }
 h1 {
-    margin: 0;
+    margin: 1%;
     text-transform: uppercase;
     font-weight: bolder;
 }
+.card-body-home {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+/* Bouton nouvelle partie */
 .btn.btn-light {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     background-color: transparent;
     border: none;
     width: 100%;
@@ -73,58 +71,64 @@ h1 {
     background-color: #0d6efd;
     color: white;
 }
+.btn.btn-light p {
+    margin: 3%;
+}
 .bi.bi-plus-circle {
     color: red;
     font-size: 1.5em;
-    margin-right: 10px;
     font-weight: bolder;
+    margin: 3%;
 }
 /* Players*/
-.players {
+.container {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    margin: 5% 1%;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
 }
-.player-panel {
-    display: inline-block;
-    background-color: #6d442e5d;
+.player-panel,
+.player-panel.active {
     border: 1px solid black;
-    margin: 1%;
-    padding: 1%;
     border-radius: 5px;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    font-size: xx-small;
+    margin: 2%;
+}
+.player-panel {
+    background-color: #6d442e5d;
 }
 .player-panel.active {
     background-color: #5e0001;
-    border: 1px solid black;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
 }
 .player-name {
     font-size: 1.5em;
     font-weight: bold;
     border-bottom: 1px solid black;
+    margin: 3%;
+}
+.card-img-top {
+    display: none;
 }
 .player-score {
     font-size: 1.5em;
+    margin: 3%;
 }
 .player-current-box {
     margin: 5%;
 }
 .player-current-label {
     font-size: 1.5em;
-    color: grey;
+    color: white;
     border-bottom: 1px solid black;
+    padding: 3%;
 }
 .player-current-score {
     font-size: 1.5em;
     font-weight: bold;
+    margin: 3%;
 }
 /* Image dé */
 .img {
@@ -132,60 +136,39 @@ h1 {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin: 2%;
+    width: 30%;
 }
 .dice {
-    width: 50%;
+    width: 80%;
 }
-/* Boutons */
+/* Boutons en bas */
+#roll-btn,
+#hold-btn {
+    padding: 1%;
+    width: 100%;
+    margin: 3%;
+}
 .buttons {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-top: 40%;
+    margin: 2%;
 }
 .bi.bi-bootstrap-reboot,
 .bi.bi-box-arrow-in-down {
     margin: 10%;
     font-size: 1.5em;
 }
-
+/* Responsive */
 @media screen and (min-width: 426px) {
-    .card-home {
-        margin-bottom: 5%;
-    }
-    .players {
-        justify-content: center;
-    }
+    /* Card players */
 
-    .dice {
-        width: 100%;
-    }
-    .buttons {
-        margin-top: 5%;
-    }
-}
-@media screen and (min-width: 875px) {
-    .card-home {
-        margin-bottom: 0;
-    }
-    .players {
-        justify-content: center;
-    }
-    .img {
-        margin: 0 20% 0 20%;
-    }
-    .dice {
-        width: 100%;
-    }
-    .buttons {
-        margin-top: 0;
-    }
-}
-@media screen and (min-width: 1024px) {
-    .players {
-        margin: 1% 1%;
-    }
-    .img {
-        margin: 2%;
+    /* Image du joueur */
+    .card-img-top {
+        display: flex;
+        border: 1px solid black;
+        border-radius: 0 20%;
+        width: 50%;
     }
 }
