@@ -37,19 +37,19 @@ main {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin: 5% 2%;
+    margin: 3% 1%;
 }
 .card-header,
 .card-body-home {
-    padding: 1%;
+    padding: 0.2%;
     border: none;
     width: 70%;
     text-align: center;
 }
 h1 {
-    margin: 1%;
     text-transform: uppercase;
     font-weight: bolder;
+    margin: 0;
 }
 .card-body-home {
     display: flex;
@@ -66,6 +66,7 @@ h1 {
     border: none;
     width: 100%;
     text-align: center;
+    padding: 0;
 }
 .btn.btn-light:hover {
     background-color: #0d6efd;
@@ -81,13 +82,19 @@ h1 {
     margin: 3%;
 }
 /* Players*/
-.container {
+.game {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 0;
     margin: 0;
+}
+.players {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 .player-panel,
 .player-panel.active {
@@ -95,7 +102,8 @@ h1 {
     border-radius: 5px;
     text-align: center;
     font-size: xx-small;
-    margin: 2%;
+    margin: 1%;
+    width: 100%;
 }
 .player-panel {
     background-color: #6d442e5d;
@@ -107,17 +115,17 @@ h1 {
     font-size: 1.5em;
     font-weight: bold;
     border-bottom: 1px solid black;
-    margin: 3%;
+    margin: 1%;
 }
 .card-img-top {
     display: none;
 }
 .player-score {
     font-size: 1.5em;
-    margin: 3%;
+    margin: 1%;
 }
 .player-current-box {
-    margin: 5%;
+    margin: 1%;
 }
 .player-current-label {
     font-size: 1.5em;
@@ -128,7 +136,7 @@ h1 {
 .player-current-score {
     font-size: 1.5em;
     font-weight: bold;
-    margin: 3%;
+    margin: 1%;
 }
 /* Image dé */
 .img {
@@ -136,7 +144,7 @@ h1 {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 2%;
+    margin: 1%;
     width: 30%;
 }
 .dice {
@@ -147,13 +155,13 @@ h1 {
 #hold-btn {
     padding: 1%;
     width: 100%;
-    margin: 3%;
+    margin: 1%;
 }
 .buttons {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 2%;
+    margin: 1%;
 }
 .bi.bi-bootstrap-reboot,
 .bi.bi-box-arrow-in-down {
@@ -162,13 +170,74 @@ h1 {
 }
 /* Responsive */
 @media screen and (min-width: 426px) {
-    /* Card players */
-
     /* Image du joueur */
+    .player-panel,
+    .player-panel.active {
+        font-size: medium;
+    }
+    .imagePlayer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
     .card-img-top {
         display: flex;
         border: 1px solid black;
         border-radius: 0 20%;
         width: 50%;
+    }
+}
+@media screen and (min-width: 712px) {
+    .game {
+        flex-direction: row;
+    }
+    .players {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 70%;
+    }
+    .dice {
+        width: 80%;
+    }
+    .buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 90%;
+    }
+    #roll-btn,
+    #hold-btn {
+        width: 30%;
+    }
+    .bi.bi-bootstrap-reboot,
+    .bi.bi.bi-box-arrow-in-down {
+        margin: 5%;
+    }
+}
+@media screen and (min-width: 1310px) {
+    .card-home {
+        margin: 1% 0.5%;
+    }
+    .player-panel,
+    .player-panel.active {
+        font-size: xx-small;
+    }
+    .players {
+        width: 50%;
+    }
+}
+@media screen and (min-width: 1844px) {
+    .card-home {
+        flex-direction: row;
+    }
+    /* Boutons en bas */
+    #roll-btn,
+    #hold-btn {
+        padding: 0;
+        margin: 0.5%;
+    }
+    .buttons {
+        margin: 0;
     }
 }
